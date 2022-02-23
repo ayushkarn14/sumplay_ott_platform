@@ -1,0 +1,56 @@
+.sum-header {
+    width: 100%;
+    background-color: black !important;
+}
+
+.sum-search-icon{
+    float: right;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sum-key-icon{
+    padding-top: 0.5%;
+    height: 100%;
+    float: left;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sum-key-icon:hover{
+    color: #000000;
+}
+
+.sum-header-button{
+    position: relative;
+    border-radius: 50px;
+    color: white;
+    background-color: rgba(255,255,255,0.4);
+    padding: 6% 15% 10% 15%;
+    border-color: transparent;
+    font-size: 16px;
+}
+
+.sum-header-button:hover{
+    background-color: rgba(255,255,255,0.6);
+}
+
+.sum-header-more-button{
+    position: relative;
+    color: white;
+    border-radius: 50px;
+    background-color: rgba(255,255,255,0.4);
+    padding: 5% 8%;
+    margin-left: 30%;
+    border-color: transparent;
+    float: right;
+}
+
+.sum-header-more-button:hover{
+    background-color: rgba(255,255,255,0.6);
+}

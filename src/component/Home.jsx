@@ -1,7 +1,11 @@
+import HomePageBanner from "./HomePageBanner";
+import Header from "./Header";
+
 export default function Home(){
     return(
         <div>
-            whatever
+            <Header/>
+            <HomePageBanner/>
         </div>
     );
 }
