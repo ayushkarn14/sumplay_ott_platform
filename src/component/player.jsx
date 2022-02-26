@@ -5,6 +5,7 @@ import {styled} from "@mui/material/styles";
 import {Box, CardMedia, Paper} from "@mui/material";
 import "../css/player.css";
 import Header from "./Header";
+import SumplayFooter from "./footer";
 import "../css/_HomePageCarousel.scss";
 
 const Item = styled(Paper)(({theme}) => ({
@@ -116,6 +117,7 @@ export default function Player() {
                     {movieposters}
                 </Grid>
             </div>
+            <SumplayFooter/>
         </div>
     );
 }
