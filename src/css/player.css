@@ -105,7 +105,7 @@ div::-webkit-scrollbar-thumb:hover {
 .move-up {
     margin-left: 2vw;
     position: relative;
-    top: -110px;
+    top: -80px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -121,4 +121,15 @@ div::-webkit-scrollbar-thumb:hover {
     .movieposter {
         height: 25vh;
     }
+}
+
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

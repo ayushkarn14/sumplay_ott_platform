@@ -7,6 +7,8 @@ import "../css/player.css";
 import Header from "./Header";
 import SumplayFooter from "./footer";
 import "../css/_HomePageCarousel.scss";
+import VideoApp from "./VideoPlayer";
+import {Link} from "react-router-dom";
 
 const Item = styled(Paper)(({theme}) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#000",
@@ -47,16 +49,18 @@ let actorsdic = [
 export default function Player() {
 
     let movieposters = moviepostersdic.map((data) => (
-        <Grid item>
-            <Card className="popup movie-poster-card">
-                <CardMedia
-                    component="img"
-                    image={data.src}
-                    alt="Paella dish"
-                    className="movieposter" alt="poster"
-                />
-            </Card>
-        </Grid>
+        <Link to={"/player"}>
+            <Grid item>
+                <Card className="popup movie-poster-card">
+                    <CardMedia
+                        component="img"
+                        image={data.src}
+                        alt="Paella dish"
+                        className="movieposter" alt="poster"
+                    />
+                </Card>
+            </Grid>
+        </Link>
     ));
 
     let actors = actorsdic.map((data) => (
@@ -66,14 +70,14 @@ export default function Player() {
                     <img
                         src={data.src}
                         className="castimg"
-                    ></img>
+                    />
                 </Item>
             </Grid>
             <Grid item xs={9}>
                 <Item>
                     <p className="castnames">
                         <span className="realname">{data.real_name}</span>
-                        <br></br>
+                        <br/>
                         <span className="charname">{data.char_name}</span>
                     </p>
                 </Item>
@@ -87,8 +91,13 @@ export default function Player() {
             <Header/>
             <Grid container spacing={2}>
                 <Grid item md={8} sm={12}>
-                    <div>
-                        {/* <iframe width="1000vw" height="600vh" src="https://www.youtube.com/embed/iik25wqIuFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                    <div style={
+                        {
+                            marginTop: "4vw",
+                            marginLeft: "3vw"
+                        }
+                    }>
+                        <VideoApp/>
                     </div>
                 </Grid>
                 <Grid item md={3.8} sm={12}>
@@ -108,7 +117,7 @@ export default function Player() {
                             </Grid>
                         </div>
                     </div>
-                    <div className="gradient"></div>
+                    <div className="gradient"/>
                 </Grid>
             </Grid>
             <div className="move-up">
