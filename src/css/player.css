@@ -81,22 +81,29 @@ div::-webkit-scrollbar-thumb:hover {
 }
 
 .movieposter {
-    width: 25vh;
-    border-radius: 15px;
+    height: 36vh;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.player-grid {
-    margin: 2% 2%
+.movieposter:hover{
+    transform: scale(1.05);
+}
+
+.movie-poster-card{
+    margin-right: 2vw;
+    border-radius: 2vh !important;
+    margin-bottom: 2vw;
 }
 
 .recommendations {
     font-weight: 500;
     font-size: 130%;
-    margin-left: 6%;
     color: #ffffff;
+    margin-left: 1vw;
 }
 
-.moveup {
+.move-up {
+    margin-left: 2vw;
     position: relative;
     top: -110px;
 }
