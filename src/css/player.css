@@ -1,0 +1,102 @@
+div::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+/* Track */
+
+div::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 30px rgb(78, 78, 78);
+    border-radius: 10px;
+    margin: 80px 0 20px 0;
+}
+
+
+/* Handle */
+
+div::-webkit-scrollbar-thumb {
+    background: rgb(122, 122, 122);
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+div::-webkit-scrollbar-thumb:hover {
+    background: #9e9e9e;
+}
+
+.moviename {
+    background-color: black;
+    color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 69vh;
+    padding: 30px;
+}
+
+.desctitle {
+    margin-bottom: 0%;
+    color: #ffffff;
+    font-size: 150%;
+    font-weight: 500;
+}
+
+.desc {
+    color: #dfdfdf;
+}
+
+.casttitle {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 150%;
+}
+
+.castimg {
+    width: 90%;
+    float: left;
+}
+
+.realname {
+    color: #ffffff;
+    font-size: 120%;
+}
+
+.charname {
+    color: #a3a3a3;
+    font-size: 120%;
+    font-style: italic;
+}
+
+.castnames {
+    float: left;
+}
+
+.gradient {
+    background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(0, 0, 0));
+    height: 100px;
+    width: 25vw;
+    position: relative;
+    top: -100px;
+}
+
+.movieposter {
+    width: 25vh;
+    border-radius: 15px;
+}
+
+.player-grid {
+    margin: 2% 2%
+}
+
+.recommendations {
+    font-weight: 500;
+    font-size: 130%;
+    margin-left: 6%;
+    color: #ffffff;
+}
+
+.moveup {
+    position: relative;
+    top: -110px;
+}
