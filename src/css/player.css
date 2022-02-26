@@ -32,7 +32,8 @@
     overflow-x: hidden;
     overflow-y: scroll;
     height: 69vh;
-    padding: 30px;
+    margin-top: 60px;
+    padding-top: 0%;
 }
 
 .desctitle {

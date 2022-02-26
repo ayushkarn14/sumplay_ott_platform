@@ -102,7 +102,7 @@ export default function Player() {
                 </Grid>
                 <Grid item md={3.8} sm={12}>
                     <div className="moviename">
-                        <h1>Harry Potter and The Prisioner of Azkaban</h1>
+                        <h1 style={{marginTop:"0"}}>Harry Potter and The Prisioner of Azkaban</h1>
                         <p className="desctitle">Description</p>
                         <p className="desc">
                             Harry Potter, Ron and Hermione return to Hogwarts School of
