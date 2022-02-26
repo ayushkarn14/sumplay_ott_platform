@@ -15,7 +15,7 @@ export default function Header(props) {
         <Box sx={{flexGrow: 1}}>
             <AppBar className="sum-header" position="static">
                 <Toolbar>
-                    <Link to={""} style={{textDecoration: "none"}}>
+                    <Link to={"/"} style={{textDecoration: "none"}}>
                         <Box sx={{display: {md: 'flex'}}}>
                             <img src={"assets/svg/sumplay.svg"} alt="Logo" height={30}/>
                         </Box>
