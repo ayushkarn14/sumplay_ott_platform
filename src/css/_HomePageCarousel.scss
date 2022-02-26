@@ -77,6 +77,9 @@
   margin-top:11vh !important;
   height: 33vh;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  border-color: transparent;
+  justify-content: center;
 }
 .carousel-button:hover{
   transform: scale(1.1);
@@ -97,4 +100,13 @@
 .round-button:hover{
   background-color: rgba(255,255,255,0.6);
   transform: translateY(-4px);
+}
+
+.arrow{
+  color: white !important;
+  width: 2vw;
+}
+
+.rotate-180{
+  transform: rotate(180deg);
 }
