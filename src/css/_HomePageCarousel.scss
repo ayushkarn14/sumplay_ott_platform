@@ -1,12 +1,12 @@
 .bg {
-    overflow: hidden;
+    overflow-x: hidden;
     color: white;
     background-color: black;
     background-size: cover;
     margin: 0vw 0vw;
     @media only screen and (max-width: 768px) {
         // height: 36vw;
-        margin: 0vw 4vw !important;
+        margin: 0vw 0vw !important;
     }
 }
 
@@ -26,14 +26,14 @@
 .landscape-poster {
     height: 18vw;
     @media only screen and (max-width: 768px) {
-        height: 30vw;
+        height: 33vw;
     }
 }
 
 .portrait-poster {
     height: 18vw;
     @media only screen and (max-width: 768px) {
-        height: 30vw;
+        height: 33vw;
     }
 }
 
@@ -48,14 +48,15 @@
 }
 
 .carousel-button {
-    margin-top: 28px !important;
+    margin-top: 75.46px !important;
     height: 18vw;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     background-color: transparent;
     border-color: transparent;
     justify-content: center;
     @media only screen and (max-width: 768px) {
-        height: 32vw;
+        margin-top: 28px !important;
+        height: 33vw;
     }
 }
 
@@ -69,13 +70,14 @@
     width: 80px;
     color: white;
     background-color: rgba(255, 255, 255, 0.4);
-    padding: 6% 10% 6% 10%;
+    padding: 8% 10% 8% 10%;
     border-color: transparent;
     font-size: 16px;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     @media only screen and (max-width: 768px) {
         font-size: 10px;
         width: 50px;
+        padding: 6% 10% 6% 10%;
     }
 }
 
@@ -109,8 +111,12 @@
 .sumplay-trending {
     width: 100%;
     background-color: black;
-    padding: 1px 0;
+    padding: 20px 0;
     text-align: center;
     color: #747474;
-    font-size: 10px;
+    font-size: 16px;
+    @media only screen and (max-width: 768px) {
+        font-size: 8px;
+        padding: 1px 0;
+    }
 }
