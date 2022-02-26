@@ -76,8 +76,10 @@ export default function HomePageCarousel() {
     };
 
     return (
+        <div id="parent" style={{padding:"0px"}}>
+            <div id="child"  style={{padding:"0px"}}>
         <Grid container style={{
-            padding: "0vw 2vw"
+            padding: "0vw 1vw"
         }}>
             <Grid item justifyContent={"center"}>
                 <button
@@ -87,7 +89,7 @@ export default function HomePageCarousel() {
             </Grid>
             <Grid item className="bg">
 
-                <Box className="sumplay-footer">
+                <Box className="sumplay-trending">
                     <Box sx={{flexGrow: 1}}>
                         <Grid container>
                             <Grid item>
@@ -188,11 +190,13 @@ export default function HomePageCarousel() {
 
                 </Grid>
             </Grid>
-            <Grid item justifyContent={"center"} sx={{display: {xs: "none", md: "flex"}}}>
+            <Grid item justifyContent={"center"}>
                 <button className="carousel-button">
                     <img src={"assets/svg/arrow.svg"} className={"arrow"}/>
                 </button>
             </Grid>
         </Grid>
+        </div>
+        </div>
     );
 }
