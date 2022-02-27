@@ -76,7 +76,7 @@ export default function HomePageCarousel() {
     };
 
     return (
-        <div id="parent" style={{padding:"0px"}}>
+        <div id="parent" style={{padding:"0px",zIndex:'3'}}>
             <div id="child"  style={{padding:"0px"}}>
         <Grid container style={{
             padding: "0vw 1vw"

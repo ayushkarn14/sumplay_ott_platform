@@ -1,6 +1,7 @@
 .sum-header {
     width: 100%;
-    background-color: black !important;
+    /* background-color: black !important; */
+    background: #00000077 !important;
 }
 
 .sum-search-icon {

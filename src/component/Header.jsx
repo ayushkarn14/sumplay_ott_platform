@@ -12,7 +12,8 @@ import "../css/header.css"
 
 export default function Header(props) {
     return (
-        <Box sx={{flexGrow: 1}}>
+        <div>
+        <Box sx={{flexGrow: 1}}  style={{ position: 'relative', zIndex: '3' }}>
             <AppBar className="sum-header" position="static">
                 <Toolbar>
                     <Link to={"/"} style={{textDecoration: "none"}}>
@@ -61,6 +62,7 @@ export default function Header(props) {
                 </Toolbar>
             </AppBar>
         </Box>
+        </div>
     );
 }
 

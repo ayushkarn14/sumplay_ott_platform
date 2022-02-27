@@ -8,13 +8,15 @@ export default function Home() {
         <div style={{
             background: "black",
             height: "100vh",
-            overflowX:"hidden"
+            overflowX:"hidden",
         }}>
                 <Header/>
-                {/*<HomePageBanner/>*/}
+                <HomePageBanner/>
                 <HomePageCarousel/>
                 <HomePageCarousel/>
-            <SumplayFooter/>
+                <HomePageCarousel/>
+                <HomePageCarousel/>
+                <SumplayFooter/>
         </div>
     );
 }

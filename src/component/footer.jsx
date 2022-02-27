@@ -3,7 +3,7 @@ import {Grid, Box} from '@mui/material';
 import "../css/footer.css"
 
 export default function SumplayFooter() {
-    return <footer>
+    return <footer className="footer-up">
         <Box className="sumplay-footer">
             <Box width={"90vw"} height={"3px"} className="footer-line"/>
             <Box sx={{flexGrow: 1}} width="90vw" className="content-box">
