@@ -1,5 +1,4 @@
 @import url("//db.onlinewebfonts.com/c/3f4943f4e662577a8113309f864540a4?family=ITC+Benguiat");
-
 .background {
     background-color: black;
 }
@@ -75,11 +74,12 @@
     z-index: 3;
     margin-top: 50px;
     // top: -43vw;
+    margin-bottom: 5vw;
     background: #00000000 !important;
 }
 
 .moving-up {
-    margin-bottom: -40vw;
+    margin-bottom: -45vw;
     @media only screen and (max-width: 768px) {
         margin-bottom: -140vw;
     }
