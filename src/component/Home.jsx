@@ -16,6 +16,7 @@ export default function Home() {
                 <HomePageCarousel/>
                 <HomePageCarousel/>
                 <HomePageCarousel/>
+                <div style={{marginBottom:"6vh"}}/>
                 <SumplayFooter/>
         </div>
     );

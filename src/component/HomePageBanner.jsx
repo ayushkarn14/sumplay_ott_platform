@@ -22,7 +22,7 @@ export default function HomePageBanner() {
       <img src="./assets/banner.png" alt="series banner" class="banner-image moving-up" />
       <img src="./assets/stpotrait.png" alt="series banner" class="banner-image-potrait moving-up" />
       <img
-        src="./assets/strangerthings.png"
+        src="./assets/st.svg"
         alt="series title"
         class="title-image"
       />
