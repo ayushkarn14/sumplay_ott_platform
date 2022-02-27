@@ -47,6 +47,7 @@ let actorsdic = [
     {src: "assets/playerpics/daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"}
 ];
 export default function Player() {
+    // document.getElementsById("des-div").style.height=window.innerWidth*7.5/12*9/16;
 
     let movieposters = moviepostersdic.map((data) => (
         <Link to={"/player"}>
@@ -76,9 +77,8 @@ export default function Player() {
             <Grid item xs={9}>
                 <Item>
                     <p className="castnames">
-                        <span className="realname">{data.real_name}</span>
-                        <br/>
-                        <span className="charname">{data.char_name}</span>
+                        <p className="realname">{data.real_name}</p>
+                        <p className="charname">{data.char_name}</p>
                     </p>
                 </Item>
             </Grid>
@@ -101,7 +101,7 @@ export default function Player() {
                     </div>
                 </Grid>
                 <Grid item md={3.8} sm={12}>
-                    <div className="moviename">
+                    <div className="moviename" id="des-div">
                         <h1 style={{marginTop:"0"}}>Harry Potter and The Prisioner of Azkaban</h1>
                         <p className="desctitle">Description</p>
                         <p className="desc">

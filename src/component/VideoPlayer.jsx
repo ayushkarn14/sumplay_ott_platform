@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import VideoPlayer from 'react-video-js-player';
+import { useLayoutEffect, useState } from 'react';
 
 class VideoApp extends React.Component {
+    
     player = {}
     state = {
         video: {
@@ -13,8 +15,13 @@ class VideoApp extends React.Component {
     onPlayerReady(player){
         this.player = player;
     }
-
     render() {
+        if(window.innerWidth>=900){
+            var ph=window.innerWidth*7.5/12*9/16;
+        }
+        else{
+            var ph=window.innerWidth*8.5/16;
+        }
         return (
             <div className="video-player">
                 <VideoPlayer
@@ -22,7 +29,7 @@ class VideoApp extends React.Component {
                     src={this.state.video.src}
                     poster={this.state.video.poster}
                     onReady={this.onPlayerReady.bind(this)}
-                    width={950}
+                    height={ph}
                 />
             </div>
         );
