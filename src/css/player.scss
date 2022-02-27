@@ -34,6 +34,9 @@
     margin-top: 60px;
     padding-top: 0%;
     padding-right: 15px;
+    @media only screen and (max-width: 768px) {
+        padding-left: 20px;
+    }
 }
 
 .desctitle {
@@ -41,10 +44,16 @@
     color: #ffffff;
     font-size: 150%;
     font-weight: 500;
+    @media only screen and (max-width: 768px) {
+        padding-left: 20px;
+    }
 }
 
 .desc {
     color: #dfdfdf;
+    @media only screen and (max-width: 768px) {
+        padding-left: 20px;
+    }
 }
 
 .casttitle {
