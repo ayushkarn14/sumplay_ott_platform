@@ -9,6 +9,7 @@ import SumplayFooter from "./footer";
 import "../css/_HomePageCarousel.scss";
 import VideoApp from "./VideoPlayer";
 import {Link} from "react-router-dom";
+import useDocumentTitle from "../documentTitle";
 
 const Item = styled(Paper)(({theme}) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#000",
@@ -27,16 +28,16 @@ const bull = (
 );
 
 let moviepostersdic = [
-    {src: "assets/playerpics/dune.jpg"},
-    {src: "assets/playerpics/freeguy.jpg"},
-    {src: "assets/playerpics/furious7.jpg"},
-    {src: "assets/playerpics/watchmen.jpg"},
-    {src: "assets/playerpics/godfather.jpg"},
-    {src: "assets/playerpics/inception.jpg"},
-    {src: "assets/playerpics/theoryofeverything.jpg"},
-    {src: "assets/playerpics/shangchi.jpg"},
-    {src: "assets/playerpics/madmax.jpg"},
-    {src: "assets/playerpics/kingsmen.jpg"},
+    {src: "assets/playerpics/dune.jpg", name: "dune"},
+    {src: "assets/playerpics/freeguy.jpg", name: "Freeguy"},
+    {src: "assets/playerpics/furious7.jpg", name: "Furious 7"},
+    {src: "assets/playerpics/watchmen.jpg", name: "Watchmen"},
+    {src: "assets/playerpics/godfather.jpg", name: "Godfather"},
+    {src: "assets/playerpics/inception.jpg", name: "Inception"},
+    {src: "assets/playerpics/theoryofeverything.jpg", name: "Theory Of Everything"},
+    {src: "assets/playerpics/shangchi.jpg", name: "Shang Chi"},
+    {src: "assets/playerpics/madmax.jpg", name: "Madmax"},
+    {src: "assets/playerpics/kingsmen.jpg", name: "Kingsmen"},
 ];
 
 let actorsdic = [
@@ -47,10 +48,19 @@ let actorsdic = [
     {src: "assets/playerpics/daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"}
 ];
 export default function Player() {
+    // useDocumentTitle("");
     // document.getElementsById("des-div").style.height=window.innerWidth*7.5/12*9/16;
+    let name = ""
+    let landscape = "endgame2.jpg"
+    const queryParams = new URLSearchParams(window.location.search)
+    name = queryParams.get("name") === null ? "Harry Potter and The Prisioner of Azkaban" : queryParams.get("name");
+    landscape = queryParams.get("lndimg") == null ? "endgame2.jpg" : queryParams.get("lndimg");
+    useDocumentTitle(name);
 
     let movieposters = moviepostersdic.map((data) => (
-        <Link to={"/player"}>
+        <Link to={`/player?name=${data.name}&lndimg=${""}`} onClick={() => setTimeout(function () {
+            window.location.reload()
+            }, 500)}>
             <Grid item>
                 <Card className="popup movie-poster-card">
                     <CardMedia
@@ -91,18 +101,13 @@ export default function Player() {
             <Header/>
             <Grid container spacing={2}>
                 <Grid item md={8} sm={12}>
-                    <div style={
-                        {
-                            marginTop: "4vw",
-                            marginLeft: "3vw"
-                        }
-                    }>
+                    <div style={{marginTop: "4vw", marginLeft: "3vw"}}>
                         <VideoApp/>
                     </div>
                 </Grid>
                 <Grid item md={3.8} sm={12}>
                     <div className="moviename" id="des-div">
-                        <h1 style={{marginTop:"0"}}>Harry Potter and The Prisioner of Azkaban</h1>
+                        <h1 style={{marginTop: "0"}}>{name}</h1>
                         <p className="desctitle">Description</p>
                         <p className="desc">
                             Harry Potter, Ron and Hermione return to Hogwarts School of

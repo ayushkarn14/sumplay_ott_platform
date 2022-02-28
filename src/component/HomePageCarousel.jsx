@@ -8,39 +8,39 @@ const moviepostersdict = [
     {
         portraitImage: "arrival.jpg",
         landScapeImage: "",
-        name: ""
+        name: "Arrival"
     },
     {
         portraitImage: "dune.jpg",
         landScapeImage: "",
-        name: ""
+        name: "Dune"
     },
     {
         portraitImage: "eot.jpg",
         landScapeImage: "",
-        name: ""
+        name: "Edge Of Tomorrow"
     },
     {
         portraitImage: "ff7.jpg",
         landScapeImage: "",
-        name: ""
+        name: "Fast And Furious 7"
     },
     {
         portraitImage: "inception.jpg",
         landScapeImage: "",
-        name: ""
+        name: "Inception"
     }
 ];
 
 export default function HomePageCarousel() {
-    const [current, setcurrent] = useState(0);
+    const [current, setCurrent] = useState(0);
     const [image1, setImage1] = useState(1);
     const [image2, setImage2] = useState(2);
     const [image3, setImage3] = useState(3);
     const [image4, setImage4] = useState(4);
 
     const nextSlide = () => {
-        setcurrent(current === 4 ? 0 : current + 1);
+        setCurrent(current === 4 ? 0 : current + 1);
         setImage1(image1 === 4 ? 0 : image1 + 1)
         setImage2(image2 === 4 ? 0 : image2 + 1)
         setImage3(image3 === 4 ? 0 : image3 + 1)
@@ -48,7 +48,7 @@ export default function HomePageCarousel() {
     };
 
     const prevSlide = () => {
-        setcurrent(current === 0 ? 5 - 1 : current - 1);
+        setCurrent(current === 0 ? 5 - 1 : current - 1);
         setImage1(image1 === 0 ? 4 : image1 - 1)
         setImage2(image2 === 0 ? 4 : image2 - 1)
         setImage3(image3 === 0 ? 4 : image3 - 1)
@@ -88,129 +88,129 @@ export default function HomePageCarousel() {
                             </Box>
                         </Box>
                         <Grid container>
-                            <Link to={"/player"}>
-                                <Grid item>
-                                    <Card style={{borderRadius: "2vh"}}
-                                          className="popup">
+                            <Grid item>
+                                <Card style={{borderRadius: "2vh"}}
+                                      className="popup">
+                                    <Link to={`/player` }>
                                         <CardMedia
                                             component="img"
                                             image="/assets/moviePosters/endgame2.jpg"
                                             alt="Paella dish"
                                             className="card-image landscape-poster"
                                         />
-                                    </Card>
-                                </Grid>
-                            </Link>
-                            <Link to={"/player"}>
-                                <Grid item>
-                                    <Card style={{
-                                        borderRadius: "2vh",
-                                        marginLeft: "2.6vw",
-                                        backgroundColor: "transparent"
-                                    }}
-                                          className="popup">
-                                        {moviepostersdict.map((slide, index) => {
-                                            return (
-                                                <div
-                                                    className={index === image1 ? 'slide active' : 'slide'}
-                                                    key={index}
-                                                >
-                                                    {index === image1 && (
+                                    </Link>
+                                </Card>
+                            </Grid>
+                            <Grid item>
+                                <Card style={{
+                                    borderRadius: "2vh",
+                                    marginLeft: "2.6vw",
+                                    backgroundColor: "transparent"
+                                }}
+                                      className="popup">
+                                    {moviepostersdict.map((slide, index) => {
+                                        return (
+                                            <div
+                                                className={index === image1 ? 'slide active' : 'slide'}
+                                                key={index}
+                                            >
+                                                {index === image1 && (
+                                                    <Link to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}>
                                                         <CardMedia
                                                             component="img"
                                                             image={"/assets/moviePosters/" + slide.portraitImage}
                                                             alt="Paella dish"
                                                             className="card-image portrait-poster"
                                                         />
-                                                    )}
-                                                </div>
-                                            );
-                                        })}
-                                    </Card>
-                                </Grid>
-                            </Link>
-                            <Link to={"/player"}>
-                                <Grid item sx={{display: {xs: "none", md: "flex"}}}>
-                                    <Card style={{
-                                        borderRadius: "2vh",
-                                        marginLeft: "2.6vw",
-                                        backgroundColor: "transparent"
-                                    }}
-                                          className="popup">
-                                        {moviepostersdict.map((slide, index) => {
-                                            return (
-                                                <div
-                                                    className={index === image2 ? 'slide active' : 'slide'}
-                                                    key={index}
-                                                >
-                                                    {index === image2 && (
-                                                    <CardMedia
-                                                        component="img"
-                                                        image={"/assets/moviePosters/" + slide.portraitImage}
-                                                        alt="Paella dish"
-                                                        className="card-image portrait-poster"
-                                                    />
-                                                        )}
-                                                </div>
-                                            );
-                                        })}
-                                    </Card>
-                                </Grid>
-                            </Link>
-                            <Link to={"/player"}>
-                                <Grid item sx={{display: {xs: "none", md: "flex"}}}>
-                                    <Card style={{
-                                        borderRadius: "2vh",
-                                        marginLeft: "2.6vw",
-                                        backgroundColor: "transparent"
-                                    }}
-                                          className="popup">
-                                        {moviepostersdict.map((slide, index) => {
-                                            return (
-                                                <div className={index === image3 ? 'slide active' : 'slide'}
-                                                     key={index}
-                                                >
-                                                    {index === image3 && (
-                                                    <CardMedia
-                                                        component="img"
-                                                        image={"/assets/moviePosters/" + slide.portraitImage}
-                                                        alt="Paella dish"
-                                                        className="card-image portrait-poster"
-                                                    />
-                                                        )}
-                                                </div>
-                                            );
-                                        })}
-                                    </Card>
-                                </Grid>
-                            </Link>
-                            <Link to={"/player"}>
-                                <Grid item sx={{display: {xs: "none", md: "flex"}}}>
-                                    <Card style={{
-                                        borderRadius: "2vh",
-                                        marginLeft: "2.6vw",
-                                        backgroundColor: "transparent"
-                                    }}
-                                          className="popup">
-                                        {moviepostersdict.map((slide, index) => {
-                                            return (
-                                                <div className={index === image4 ? 'slide active' : 'slide'}
-                                                     key={index}
-                                                >
-                                                    {index === image4 && (
-                                                    <CardMedia
-                                                        component="img"
-                                                        image={"/assets/moviePosters/" + slide.portraitImage}
-                                                        alt="Paella dish"
-                                                        className="card-image portrait-poster"
-                                                    />
-                                                        )}
-                                                </div>
-                                            );
-                                        })}
-                                    </Card>
-                                </Grid>
-                            </Link>
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </Card>
+                            </Grid>
+                            <Grid item sx={{display: {xs: "none", md: "flex"}}}>
+                                <Card style={{
+                                    borderRadius: "2vh",
+                                    marginLeft: "2.6vw",
+                                    backgroundColor: "transparent"
+                                }}
+                                      className="popup">
+                                    {moviepostersdict.map((slide, index) => {
+                                        return (
+                                            <div
+                                                className={index === image2 ? 'slide active' : 'slide'}
+                                                key={index}
+                                            >
+                                                {index === image2 && (
+                                                    <Link to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}>
+                                                        <CardMedia
+                                                            component="img"
+                                                            image={"/assets/moviePosters/" + slide.portraitImage}
+                                                            alt="Paella dish"
+                                                            className="card-image portrait-poster"
+                                                        />
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </Card>
+                            </Grid>
+                            <Grid item sx={{display: {xs: "none", md: "flex"}}}>
+                                <Card style={{
+                                    borderRadius: "2vh",
+                                    marginLeft: "2.6vw",
+                                    backgroundColor: "transparent"
+                                }}
+                                      className="popup">
+                                    {moviepostersdict.map((slide, index) => {
+                                        return (
+                                            <div className={index === image3 ? 'slide active' : 'slide'}
+                                                 key={index}
+                                            >
+                                                {index === image3 && (
+                                                    <Link to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}>
+                                                        <CardMedia
+                                                            component="img"
+                                                            image={"/assets/moviePosters/" + slide.portraitImage}
+                                                            alt="Paella dish"
+                                                            className="card-image portrait-poster"
+                                                        />
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </Card>
+                            </Grid>
+                            <Grid item sx={{display: {xs: "none", md: "flex"}}}>
+                                <Card style={{
+                                    borderRadius: "2vh",
+                                    marginLeft: "2.6vw",
+                                    backgroundColor: "transparent"
+                                }}
+                                      className="popup">
+                                    {moviepostersdict.map((slide, index) => {
+                                        return (
+                                            <div className={index === image4 ? 'slide active' : 'slide'}
+                                                 key={index}
+                                            >
+                                                {index === image4 && (
+                                                    <Link to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}>
+                                                        <CardMedia
+                                                            component="img"
+                                                            image={"/assets/moviePosters/" + slide.portraitImage}
+                                                            alt="Paella dish"
+                                                            className="card-image portrait-poster"
+                                                        />
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </Card>
+                            </Grid>
 
                         </Grid>
                     </Grid>

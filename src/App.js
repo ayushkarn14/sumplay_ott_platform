@@ -6,9 +6,6 @@ import Player from "./component/player";
 function App() {
   return (
       <Routes>
-        {/*<Route   path="/" element={<UserPublicId/>}>*/}
-        {/*    /!* <UserPublicId /> *!/*/}
-        {/*</Route>*/}
         <Route path="/" element={<Home/>}>
         </Route>
         <Route path="/player" element={<Player/>}>

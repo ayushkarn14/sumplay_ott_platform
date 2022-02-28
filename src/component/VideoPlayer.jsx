@@ -1,26 +1,29 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import VideoPlayer from 'react-video-js-player';
-import { useLayoutEffect, useState } from 'react';
+import {useLayoutEffect, useState} from 'react';
 
 class VideoApp extends React.Component {
-    
+    queryParams = new URLSearchParams(window.location.search)
+    landscape = (this.queryParams.get("lndimg") === null) || (this.queryParams.get("lndimg") === "") ? "endgame2.jpg" : this.queryParams.get("lndimg");
+
     player = {}
     state = {
         video: {
             src: "assets/playerpics/rickroll.mp4",
-            poster: "assets/moviePosters/endgame2.jpg"
+            poster: `assets/moviePosters/${this.landscape}`
         }
     }
 
-    onPlayerReady(player){
+    onPlayerReady(player) {
         this.player = player;
     }
+
     render() {
-        if(window.innerWidth>=900){
-            var ph=window.innerWidth*7.5/12*9/16;
-        }
-        else{
-            var ph=window.innerWidth*8.5/16;
+        let ph;
+        if (window.innerWidth >= 900) {
+            ph = window.innerWidth * 7.5 / 12 * 9 / 16;
+        } else {
+            ph = window.innerWidth * 8.5 / 16;
         }
         return (
             <div className="video-player">
@@ -35,4 +38,5 @@ class VideoApp extends React.Component {
         );
     }
 }
+
 export default VideoApp;
