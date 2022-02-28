@@ -129,7 +129,7 @@ export default function HomePageCarousel() {
                                     })}
                                 </Card>
                             </Grid>
-                            <Grid item sx={{display: {xs: "none", md: "flex"}}}>
+                            <Grid item className="gonecard" >
                                 <Card style={{
                                     borderRadius: "2vh",
                                     marginLeft: "2.6vw",
@@ -157,7 +157,7 @@ export default function HomePageCarousel() {
                                     })}
                                 </Card>
                             </Grid>
-                            <Grid item sx={{display: {xs: "none", md: "flex"}}}>
+                            <Grid item className="gonecard" >
                                 <Card style={{
                                     borderRadius: "2vh",
                                     marginLeft: "2.6vw",
@@ -184,7 +184,7 @@ export default function HomePageCarousel() {
                                     })}
                                 </Card>
                             </Grid>
-                            <Grid item sx={{display: {xs: "none", md: "flex"}}}>
+                            <Grid item className="gonecard">
                                 <Card style={{
                                     borderRadius: "2vh",
                                     marginLeft: "2.6vw",
