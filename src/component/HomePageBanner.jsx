@@ -1,14 +1,9 @@
 import "../css/banner.scss";
 import Grid from "@mui/material/Grid";
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
 import { styled } from "@mui/material/styles";
-import { Box, CardMedia, Paper } from "@mui/material";
-import Typography from "@mui/material/Typography";
+import { Paper } from "@mui/material";
 import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
 const Item = styled(Paper)(({theme}) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#000",
     ...theme.typography.body2,

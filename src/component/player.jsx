@@ -28,16 +28,16 @@ const bull = (
 );
 
 let moviepostersdic = [
-    {src: "assets/playerpics/dune.jpg", name: "dune"},
-    {src: "assets/playerpics/freeguy.jpg", name: "Freeguy"},
-    {src: "assets/playerpics/furious7.jpg", name: "Furious 7"},
-    {src: "assets/playerpics/watchmen.jpg", name: "Watchmen"},
-    {src: "assets/playerpics/godfather.jpg", name: "Godfather"},
-    {src: "assets/playerpics/inception.jpg", name: "Inception"},
-    {src: "assets/playerpics/theoryofeverything.jpg", name: "Theory Of Everything"},
-    {src: "assets/playerpics/shangchi.jpg", name: "Shang Chi"},
-    {src: "assets/playerpics/madmax.jpg", name: "Madmax"},
-    {src: "assets/playerpics/kingsmen.jpg", name: "Kingsmen"},
+    {src: "dune.jpg", name: "dune"},
+    {src: "freeguy.jpg", name: "Freeguy"},
+    {src: "furious7.jpg", name: "Furious 7"},
+    {src: "watchmen.jpg", name: "Watchmen"},
+    {src: "godfather.jpg", name: "Godfather"},
+    {src: "inception.jpg", name: "Inception"},
+    {src: "theoryofeverything.jpg", name: "Theory Of Everything"},
+    {src: "shangchi.jpg", name: "Shang Chi"},
+    {src: "madmax.jpg", name: "Madmax"},
+    {src: "kingsmen.jpg", name: "Kingsmen"},
 ];
 
 let actorsdic = [
@@ -65,8 +65,8 @@ export default function Player() {
                 <Card className="popup movie-poster-card">
                     <CardMedia
                         component="img"
-                        image={data.src}
-                        alt="Paella dish"
+                        image={`assets/playerpics/${data.src}`}
+                        alt={data.name}
                         className="movieposter" alt="poster"
                     />
                 </Card>

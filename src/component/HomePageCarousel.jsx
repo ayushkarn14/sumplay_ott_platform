@@ -4,32 +4,57 @@ import React, {useState} from "react";
 import {toast} from "react-toastify";
 import {Link} from "react-router-dom"
 
-const moviepostersdict = [
+const moviepostersdict = [[
     {
         portraitImage: "arrival.jpg",
-        landScapeImage: "",
+        landScapeImage: "arrivalland.jpg",
         name: "Arrival"
     },
     {
         portraitImage: "dune.jpg",
-        landScapeImage: "",
+        landScapeImage: "duneland.jpg",
         name: "Dune"
     },
     {
         portraitImage: "eot.jpg",
-        landScapeImage: "",
+        landScapeImage: "eotland.jpg",
         name: "Edge Of Tomorrow"
     },
     {
         portraitImage: "ff7.jpg",
-        landScapeImage: "",
+        landScapeImage: "ff7land.jpg",
         name: "Fast And Furious 7"
     },
     {
         portraitImage: "inception.jpg",
-        landScapeImage: "",
+        landScapeImage: "inceptionland.jpg",
         name: "Inception"
-    }
+    },
+    {
+        portraitImage: "free-guy.jpg",
+        landScapeImage: "free-guyland.jpg",
+        name: "Free guy"
+    },
+    {
+        portraitImage: "harrypotter.jpg",
+        landScapeImage: "harrypotterland.jpg",
+        name: "Harry Potter"
+    },
+    {
+        portraitImage: "interstellar.jpg",
+        landScapeImage: "interstellarland.jpg",
+        name: "Interstellar"
+    },
+    {
+        portraitImage: "kgf.jpg",
+        landScapeImage: "kgfland.jpg",
+        name: "KGF"
+    },
+    {
+        portraitImage: "pk.jpg",
+        landScapeImage: "pkland.jpg",
+        name: "PK"
+    }]
 ];
 
 export default function HomePageCarousel() {
@@ -91,14 +116,26 @@ export default function HomePageCarousel() {
                             <Grid item>
                                 <Card style={{borderRadius: "2vh"}}
                                       className="popup">
-                                    <Link to={`/player` }>
-                                        <CardMedia
-                                            component="img"
-                                            image="/assets/moviePosters/endgame2.jpg"
-                                            alt="Paella dish"
-                                            className="card-image landscape-poster"
-                                        />
-                                    </Link>
+
+                                {moviepostersdict[0].map((slide, index) => {
+                                    return (
+                                        <div
+                                            className={index === current ? 'slide active' : 'slide'}
+                                            key={index}
+                                        >
+                                            {index === current && (
+                                                <Link to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}>
+                                                    <CardMedia
+                                                        component="img"
+                                                        image={"/assets/moviePosters/" + slide.landScapeImage}
+                                                        alt="Paella dish"
+                                                        className="card-image landscape-poster"
+                                                    />
+                                                </Link>
+                                            )}
+                                        </div>
+                                    );
+                                })}
                                 </Card>
                             </Grid>
                             <Grid item>
@@ -108,7 +145,7 @@ export default function HomePageCarousel() {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict.map((slide, index) => {
+                                    {moviepostersdict[0].map((slide, index) => {
                                         return (
                                             <div
                                                 className={index === image1 ? 'slide active' : 'slide'}
@@ -136,7 +173,7 @@ export default function HomePageCarousel() {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict.map((slide, index) => {
+                                    {moviepostersdict[0].map((slide, index) => {
                                         return (
                                             <div
                                                 className={index === image2 ? 'slide active' : 'slide'}
@@ -164,7 +201,7 @@ export default function HomePageCarousel() {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict.map((slide, index) => {
+                                    {moviepostersdict[0].map((slide, index) => {
                                         return (
                                             <div className={index === image3 ? 'slide active' : 'slide'}
                                                  key={index}
@@ -191,7 +228,7 @@ export default function HomePageCarousel() {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict.map((slide, index) => {
+                                    {moviepostersdict[0].map((slide, index) => {
                                         return (
                                             <div className={index === image4 ? 'slide active' : 'slide'}
                                                  key={index}

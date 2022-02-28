@@ -25,6 +25,8 @@ class VideoApp extends React.Component {
         } else {
             ph = window.innerWidth * 8.5 / 16;
         }
+        window.addEventListener('resize', () => {window.location.reload();
+        console.log("okkk")});
         return (
             <div className="video-player">
                 <VideoPlayer
