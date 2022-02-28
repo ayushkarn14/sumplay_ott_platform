@@ -17,6 +17,31 @@
     }
 }
 
+.movie-rating-landscape{
+    font-family: Calibri;
+    font-weight: bolder;
+    color: white;
+    opacity: 0.8;
+    font-size: 8vw;
+    position: relative;
+    top: 9vw;
+    margin-left: 1vw;
+    margin-top: -18vw;
+}
+.movie-rating-portrait{
+    font-family: Calibri;
+    font-weight: bolder;
+    color: white;
+    opacity: 0.8;
+    font-size: 4vw;
+    position: relative;
+    top: 4vw;
+    margin-left: 1vw;
+    margin-top: -9vw;
+}
+
+
+
 .landscape-poster {
     height: 18vw;
     max-width: 32vw !important;

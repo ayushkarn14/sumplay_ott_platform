@@ -1,61 +1,62 @@
-import {Card, CardMedia, Grid, Box, Button} from "@mui/material"
+import {Card, CardMedia, Grid, Box, Button, CardContent} from "@mui/material"
 import "../css/_HomePageCarousel.scss"
 import React, {useState} from "react";
 import {toast} from "react-toastify";
 import {Link} from "react-router-dom"
 
-const moviepostersdict = { "Trending in India" : [
-    {
-        portraitImage: "arrival.jpg",
-        landScapeImage: "arrivalland.jpg",
-        name: "Arrival"
-    },
-    {
-        portraitImage: "dune.jpg",
-        landScapeImage: "duneland.jpg",
-        name: "Dune"
-    },
-    {
-        portraitImage: "eot.jpg",
-        landScapeImage: "eotland.jpg",
-        name: "Edge Of Tomorrow"
-    },
-    {
-        portraitImage: "ff7.jpg",
-        landScapeImage: "ff7land.jpg",
-        name: "Fast And Furious 7"
-    },
-    {
-        portraitImage: "inception.jpg",
-        landScapeImage: "inceptionland.jpg",
-        name: "Inception"
-    },
-    {
-        portraitImage: "free-guy.jpg",
-        landScapeImage: "free-guyland.jpg",
-        name: "Free guy"
-    },
-    {
-        portraitImage: "harrypotter.jpg",
-        landScapeImage: "harrypotterland.jpg",
-        name: "Harry Potter"
-    },
-    {
-        portraitImage: "interstellar.jpg",
-        landScapeImage: "interstellarland.jpg",
-        name: "Interstellar"
-    },
-    {
-        portraitImage: "kgf.jpg",
-        landScapeImage: "kgfland.jpg",
-        name: "KGF"
-    },
-    {
-        portraitImage: "pk.jpg",
-        landScapeImage: "pkland.jpg",
-        name: "PK"
-    }],
-    "Science Fiction" :[
+const moviepostersdict = {
+    "Trending in India": [
+        {
+            portraitImage: "arrival.jpg",
+            landScapeImage: "arrivalland.jpg",
+            name: "Arrival"
+        },
+        {
+            portraitImage: "dune.jpg",
+            landScapeImage: "duneland.jpg",
+            name: "Dune"
+        },
+        {
+            portraitImage: "eot.jpg",
+            landScapeImage: "eotland.jpg",
+            name: "Edge Of Tomorrow"
+        },
+        {
+            portraitImage: "ff7.jpg",
+            landScapeImage: "ff7land.jpg",
+            name: "Fast And Furious 7"
+        },
+        {
+            portraitImage: "inception.jpg",
+            landScapeImage: "inceptionland.jpg",
+            name: "Inception"
+        },
+        {
+            portraitImage: "free-guy.jpg",
+            landScapeImage: "free-guyland.jpg",
+            name: "Free guy"
+        },
+        {
+            portraitImage: "harrypotterland.jpg",
+            landScapeImage: "harrypotter.jpg",
+            name: "Harry Potter"
+        },
+        {
+            portraitImage: "interstellar.jpg",
+            landScapeImage: "interstellarland.jpg",
+            name: "Interstellar"
+        },
+        {
+            portraitImage: "kgf.jpg",
+            landScapeImage: "kgfland.jpg",
+            name: "KGF"
+        },
+        {
+            portraitImage: "pk.jpg",
+            landScapeImage: "pkland.jpg",
+            name: "PK"
+        }],
+    "Science Fiction": [
 
         {
             portraitImage: "dune.jpg",
@@ -81,7 +82,114 @@ const moviepostersdict = { "Trending in India" : [
             portraitImage: "arrival.jpg",
             landScapeImage: "arrivalland.jpg",
             name: "Arrival"
-        },        {
+        },
+        {
+            portraitImage: "free-guy.jpg",
+            landScapeImage: "free-guyland.jpg",
+            name: "Free guy"
+        },
+        {
+            portraitImage: "interstellar.jpg",
+            landScapeImage: "interstellarland.jpg",
+            name: "Interstellar"
+        },
+        {
+            portraitImage: "kgf.jpg",
+            landScapeImage: "kgfland.jpg",
+            name: "KGF"
+        },
+        {
+            portraitImage: "harrypotterland.jpg",
+            landScapeImage: "harrypotter.jpg",
+            name: "Harry Potter"
+        },
+        {
+            portraitImage: "pk.jpg",
+            landScapeImage: "pkland.jpg",
+            name: "PK"
+        }
+    ],
+    "Action": [
+
+        {
+            portraitImage: "endgame.jpg",
+            landScapeImage: "endgameland.jpg",
+            name: "Avengers: Endgame"
+        },
+        {
+            portraitImage: "matrix.jpg",
+            landScapeImage: "matrixland.jpg",
+            name: "Matrix"
+        },
+        {
+            portraitImage: "ironman.png",
+            landScapeImage: "ironmanland.png",
+            name: "Iron Man"
+        },
+        {
+            portraitImage: "kgf.jpg",
+            landScapeImage: "kgfland.jpg",
+            name: "KGF"
+        },
+        {
+            portraitImage: "arrival.jpg",
+            landScapeImage: "arrivalland.jpg",
+            name: "Arrival"
+        },
+        {
+            portraitImage: "free-guy.jpg",
+            landScapeImage: "free-guyland.jpg",
+            name: "Free guy"
+        },
+        {
+            portraitImage: "interstellar.jpg",
+            landScapeImage: "interstellarland.jpg",
+            name: "Interstellar"
+        },
+        {
+            portraitImage: "kgf.jpg",
+            landScapeImage: "kgfland.jpg",
+            name: "KGF"
+        },
+        {
+            portraitImage: "harrypotterland.jpg",
+            landScapeImage: "harrypotter.jpg",
+            name: "Harry Potter"
+        },
+        {
+            portraitImage: "pk.jpg",
+            landScapeImage: "pkland.jpg",
+            name: "PK"
+        }
+    ],
+    "Drama": [
+
+        {
+            portraitImage: "moneyheistland.jpg",
+            landScapeImage: "moneyheist.jpg",
+            name: "Money Heist"
+        },
+        {
+            portraitImage: "Okja.png",
+            landScapeImage: "okjaland.jpg",
+            name: "Matrix"
+        },
+        {
+            portraitImage: "wm.jpg",
+            landScapeImage: "wmland.jpg",
+            name: "Iron Man"
+        },
+        {
+            portraitImage: "punisher.jpg",
+            landScapeImage: "punisherland.jpg",
+            name: "KGF"
+        },
+        {
+            portraitImage: "arrival.jpg",
+            landScapeImage: "arrivalland.jpg",
+            name: "Arrival"
+        },
+        {
             portraitImage: "free-guy.jpg",
             landScapeImage: "free-guyland.jpg",
             name: "Free guy"
@@ -107,7 +215,6 @@ const moviepostersdict = { "Trending in India" : [
             name: "PK"
         }
     ]
-
 };
 
 
@@ -121,19 +228,19 @@ export default function HomePageCarousel(props) {
     const carouselName = props.index;
 
     const nextSlide = () => {
-        setCurrent(current === 4 ? 0 : current + 1);
-        setImage1(image1 === 4 ? 0 : image1 + 1)
-        setImage2(image2 === 4 ? 0 : image2 + 1)
-        setImage3(image3 === 4 ? 0 : image3 + 1)
-        setImage4(image4 === 4 ? 0 : image4 + 1)
+        setCurrent(current === 9 ? 0 : current + 1);
+        setImage1(image1 === 9 ? 0 : image1 + 1)
+        setImage2(image2 === 9 ? 0 : image2 + 1)
+        setImage3(image3 === 9 ? 0 : image3 + 1)
+        setImage4(image4 === 9 ? 0 : image4 + 1)
     };
 
     const prevSlide = () => {
-        setCurrent(current === 0 ? 5 - 1 : current - 1);
-        setImage1(image1 === 0 ? 4 : image1 - 1)
-        setImage2(image2 === 0 ? 4 : image2 - 1)
-        setImage3(image3 === 0 ? 4 : image3 - 1)
-        setImage4(image4 === 0 ? 4 : image4 - 1)
+        setCurrent(current === 0 ? 9 : current - 1);
+        setImage1(image1 === 0 ? 9 : image1 - 1)
+        setImage2(image2 === 0 ? 9 : image2 - 1)
+        setImage3(image3 === 0 ? 9 : image3 - 1)
+        setImage4(image4 === 0 ? 9 : image4 - 1)
     };
 
     return (
@@ -173,25 +280,30 @@ export default function HomePageCarousel(props) {
                                 <Card style={{borderRadius: "2vh"}}
                                       className="popup">
 
-                                {moviepostersdict[carouselName].map((slide, index) => {
-                                    return (
-                                        <div
-                                            className={index === current ? 'slide active' : 'slide'}
-                                            key={index}
-                                        >
-                                            {index === current && (
-                                                <Link to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}>
-                                                    <CardMedia
-                                                        component="img"
-                                                        image={"/assets/moviePosters/" + slide.landScapeImage}
-                                                        alt="Paella dish"
-                                                        className="card-image landscape-poster"
-                                                    />
-                                                </Link>
-                                            )}
-                                        </div>
-                                    );
-                                })}
+                                    {moviepostersdict[carouselName].map((slide, index) => {
+                                        return (
+                                            <div
+                                                className={index === current ? 'slide active' : 'slide'}
+                                                key={index}
+                                            >
+                                                {index === current && (
+                                                    <Link
+                                                        to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}
+                                                        style={{textDecoration: "none"}}>
+                                                        <CardMedia
+                                                            component="img"
+                                                            image={"/assets/moviePosters/" + slide.landScapeImage}
+                                                            alt={slide.name}
+                                                            className="card-image landscape-poster"
+                                                        />
+                                                        <p className={"movie-rating-landscape"}>
+                                                            {index + 1}
+                                                        </p>
+                                                    </Link>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
                                 </Card>
                             </Grid>
                             <Grid item>
@@ -208,13 +320,18 @@ export default function HomePageCarousel(props) {
                                                 key={index}
                                             >
                                                 {index === image1 && (
-                                                    <Link to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}>
+                                                    <Link
+                                                        to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}
+                                                        style={{textDecoration: "none"}}>
                                                         <CardMedia
                                                             component="img"
                                                             image={"/assets/moviePosters/" + slide.portraitImage}
-                                                            alt="Paella dish"
+                                                            alt={slide.name}
                                                             className="card-image portrait-poster"
                                                         />
+                                                        <p className={"movie-rating-portrait"}>
+                                                            {index + 1}
+                                                        </p>
                                                     </Link>
                                                 )}
                                             </div>
@@ -222,7 +339,7 @@ export default function HomePageCarousel(props) {
                                     })}
                                 </Card>
                             </Grid>
-                            <Grid item className="gonecard" >
+                            <Grid item className="gonecard">
                                 <Card style={{
                                     borderRadius: "2vh",
                                     marginLeft: "2.6vw",
@@ -236,13 +353,18 @@ export default function HomePageCarousel(props) {
                                                 key={index}
                                             >
                                                 {index === image2 && (
-                                                    <Link to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}>
+                                                    <Link
+                                                        to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}
+                                                        style={{textDecoration: "none"}}>
                                                         <CardMedia
                                                             component="img"
                                                             image={"/assets/moviePosters/" + slide.portraitImage}
-                                                            alt="Paella dish"
+                                                            alt={slide.name}
                                                             className="card-image portrait-poster"
                                                         />
+                                                        <p className={"movie-rating-portrait"}>
+                                                            {index + 1}
+                                                        </p>
                                                     </Link>
                                                 )}
                                             </div>
@@ -250,7 +372,7 @@ export default function HomePageCarousel(props) {
                                     })}
                                 </Card>
                             </Grid>
-                            <Grid item className="gonecard" >
+                            <Grid item className="gonecard">
                                 <Card style={{
                                     borderRadius: "2vh",
                                     marginLeft: "2.6vw",
@@ -263,13 +385,18 @@ export default function HomePageCarousel(props) {
                                                  key={index}
                                             >
                                                 {index === image3 && (
-                                                    <Link to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}>
+                                                    <Link
+                                                        to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}
+                                                        style={{textDecoration: "none"}}>
                                                         <CardMedia
                                                             component="img"
                                                             image={"/assets/moviePosters/" + slide.portraitImage}
-                                                            alt="Paella dish"
+                                                            alt={slide.name}
                                                             className="card-image portrait-poster"
                                                         />
+                                                        <p className={"movie-rating-portrait"}>
+                                                            {index + 1}
+                                                        </p>
                                                     </Link>
                                                 )}
                                             </div>
@@ -290,13 +417,18 @@ export default function HomePageCarousel(props) {
                                                  key={index}
                                             >
                                                 {index === image4 && (
-                                                    <Link to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}>
+                                                    <Link
+                                                        to={`/player?name=${slide.name}&lndimg=${slide.landScapeImage}`}
+                                                        style={{textDecoration: "none"}}>
                                                         <CardMedia
                                                             component="img"
                                                             image={"/assets/moviePosters/" + slide.portraitImage}
-                                                            alt="Paella dish"
+                                                            alt={slide.name}
                                                             className="card-image portrait-poster"
                                                         />
+                                                        <p className={"movie-rating-portrait"}>
+                                                            {index + 1}
+                                                        </p>
                                                     </Link>
                                                 )}
                                             </div>
