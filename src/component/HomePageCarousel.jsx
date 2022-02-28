@@ -57,7 +57,7 @@ const moviepostersdict = [[
     }]
 ];
 
-export default function HomePageCarousel() {
+export default function HomePageCarousel(props) {
     const [current, setCurrent] = useState(0);
     const [image1, setImage1] = useState(1);
     const [image2, setImage2] = useState(2);
