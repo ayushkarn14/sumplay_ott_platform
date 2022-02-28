@@ -76,7 +76,7 @@ export default function Player() {
     useDocumentTitle(name);
 
     let movieposters = moviepostersdic.map((data) => (
-        <Link to={`/player?name=${data.name}&lndimg=${data.landScapeImage}`} onClick={() => setTimeout(function () {
+        <Link to={`/player?name=${data.portraitImage}&lndimg=${data.landScapeImage}`} onClick={() => setTimeout(function () {
             window.location.reload()
         }, 500)}>
             <Grid item>
