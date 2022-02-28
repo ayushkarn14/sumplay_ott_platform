@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import {toast} from "react-toastify";
 import {Link} from "react-router-dom"
 
-const moviepostersdict = [[
+const moviepostersdict = { "Trending in India" : [
     {
         portraitImage: "arrival.jpg",
         landScapeImage: "arrivalland.jpg",
@@ -54,8 +54,62 @@ const moviepostersdict = [[
         portraitImage: "pk.jpg",
         landScapeImage: "pkland.jpg",
         name: "PK"
-    }]
-];
+    }],
+    "Science Fiction" :[
+
+        {
+            portraitImage: "dune.jpg",
+            landScapeImage: "duneland.jpg",
+            name: "Dune"
+        },
+        {
+            portraitImage: "eot.jpg",
+            landScapeImage: "eotland.jpg",
+            name: "Edge Of Tomorrow"
+        },
+        {
+            portraitImage: "ff7.jpg",
+            landScapeImage: "ff7land.jpg",
+            name: "Fast And Furious 7"
+        },
+        {
+            portraitImage: "inception.jpg",
+            landScapeImage: "inceptionland.jpg",
+            name: "Inception"
+        },
+        {
+            portraitImage: "arrival.jpg",
+            landScapeImage: "arrivalland.jpg",
+            name: "Arrival"
+        },        {
+            portraitImage: "free-guy.jpg",
+            landScapeImage: "free-guyland.jpg",
+            name: "Free guy"
+        },
+        {
+            portraitImage: "interstellar.jpg",
+            landScapeImage: "interstellarland.jpg",
+            name: "Interstellar"
+        },
+        {
+            portraitImage: "kgf.jpg",
+            landScapeImage: "kgfland.jpg",
+            name: "KGF"
+        },
+        {
+            portraitImage: "harrypotter.jpg",
+            landScapeImage: "harrypotterland.jpg",
+            name: "Harry Potter"
+        },
+        {
+            portraitImage: "pk.jpg",
+            landScapeImage: "pkland.jpg",
+            name: "PK"
+        }
+    ]
+
+};
+
 
 export default function HomePageCarousel(props) {
     const [current, setCurrent] = useState(0);
@@ -64,7 +118,7 @@ export default function HomePageCarousel(props) {
     const [image3, setImage3] = useState(3);
     const [image4, setImage4] = useState(4);
 
-    const carouselno = props.index;
+    const carouselName = props.index;
 
     const nextSlide = () => {
         setCurrent(current === 4 ? 0 : current + 1);
@@ -101,7 +155,7 @@ export default function HomePageCarousel(props) {
                                 <Grid container>
                                     <Grid item>
                                         <Box className="carousel-topic-typography">
-                                            Trending in India
+                                            {carouselName}
                                         </Box>
                                     </Grid>
                                     <Box sx={{flexGrow: 1}}/>
@@ -119,7 +173,7 @@ export default function HomePageCarousel(props) {
                                 <Card style={{borderRadius: "2vh"}}
                                       className="popup">
 
-                                {moviepostersdict[carouselno].map((slide, index) => {
+                                {moviepostersdict[carouselName].map((slide, index) => {
                                     return (
                                         <div
                                             className={index === current ? 'slide active' : 'slide'}
@@ -147,7 +201,7 @@ export default function HomePageCarousel(props) {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict[carouselno].map((slide, index) => {
+                                    {moviepostersdict[carouselName].map((slide, index) => {
                                         return (
                                             <div
                                                 className={index === image1 ? 'slide active' : 'slide'}
@@ -175,7 +229,7 @@ export default function HomePageCarousel(props) {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict[carouselno].map((slide, index) => {
+                                    {moviepostersdict[carouselName].map((slide, index) => {
                                         return (
                                             <div
                                                 className={index === image2 ? 'slide active' : 'slide'}
@@ -203,7 +257,7 @@ export default function HomePageCarousel(props) {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict[carouselno].map((slide, index) => {
+                                    {moviepostersdict[carouselName].map((slide, index) => {
                                         return (
                                             <div className={index === image3 ? 'slide active' : 'slide'}
                                                  key={index}
@@ -230,7 +284,7 @@ export default function HomePageCarousel(props) {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict[carouselno].map((slide, index) => {
+                                    {moviepostersdict[carouselName].map((slide, index) => {
                                         return (
                                             <div className={index === image4 ? 'slide active' : 'slide'}
                                                  key={index}
