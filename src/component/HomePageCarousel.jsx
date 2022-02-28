@@ -278,7 +278,7 @@ export default function HomePageCarousel(props) {
                         <Grid container>
                             <Grid item>
                                 <Card style={{borderRadius: "2vh"}}
-                                      className="popup">
+                                      className="popup landscape-poster">
 
                                     {moviepostersdict[carouselName].map((slide, index) => {
                                         return (
@@ -312,7 +312,7 @@ export default function HomePageCarousel(props) {
                                     marginLeft: "2.6vw",
                                     backgroundColor: "transparent"
                                 }}
-                                      className="popup">
+                                      className="popup portrait-poster">
                                     {moviepostersdict[carouselName].map((slide, index) => {
                                         return (
                                             <div
@@ -345,7 +345,7 @@ export default function HomePageCarousel(props) {
                                     marginLeft: "2.6vw",
                                     backgroundColor: "transparent"
                                 }}
-                                      className="popup">
+                                      className="popup portrait-poster">
                                     {moviepostersdict[carouselName].map((slide, index) => {
                                         return (
                                             <div
@@ -378,7 +378,7 @@ export default function HomePageCarousel(props) {
                                     marginLeft: "2.6vw",
                                     backgroundColor: "transparent"
                                 }}
-                                      className="popup">
+                                      className="popup portrait-poster">
                                     {moviepostersdict[carouselName].map((slide, index) => {
                                         return (
                                             <div className={index === image3 ? 'slide active' : 'slide'}
@@ -410,7 +410,7 @@ export default function HomePageCarousel(props) {
                                     marginLeft: "2.6vw",
                                     backgroundColor: "transparent"
                                 }}
-                                      className="popup">
+                                      className="popup portrait-poster">
                                     {moviepostersdict[carouselName].map((slide, index) => {
                                         return (
                                             <div className={index === image4 ? 'slide active' : 'slide'}

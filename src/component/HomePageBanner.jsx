@@ -5,6 +5,11 @@ import { styled } from "@mui/material/styles";
 import { Paper } from "@mui/material";
 import Button from "@mui/material/Button";
 import {Link} from "react-router-dom";
+import {toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure()
+
 const Item = styled(Paper)(({theme}) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#000",
     ...theme.typography.body2,
@@ -45,7 +50,9 @@ export default function HomePageBanner() {
                 
             </Grid>
             <Grid item md={1.2} xs={4.2} className="button-align">
-                <Button variant="contained" className="bannerbuttons"><span style={{fontSize:"250%"}}>&#43;</span>&nbsp;&nbsp;<p><span className="buttontext">Watch Later</span></p></Button>
+                <Button onClick={()=>{
+                    toast('Added to Watch Later')
+                }} variant="contained" className="bannerbuttons"><span style={{fontSize:"250%"}}>&#43;</span>&nbsp;&nbsp;<p><span className="buttontext">Watch Later</span></p></Button>
             </Grid>
             <Grid item md={4.7} xs={3.8}>
                 

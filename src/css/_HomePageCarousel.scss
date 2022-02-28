@@ -5,6 +5,7 @@
 }
 
 .popup {
+
     &:hover {
         transform: translateY(-5px);
     }
@@ -44,7 +45,7 @@
 
 .landscape-poster {
     height: 18vw;
-    max-width: 32vw !important;
+    width: 32vw !important;
     @media only screen and (max-width: 768px) {
         height: 34vw;
         max-width: 56vw !important;
@@ -53,7 +54,7 @@
 
 .portrait-poster {
     height: 18vw;
-    max-width: 12vw;
+    width: 12vw;
     @media only screen and (max-width: 768px) {
         height: 33vw;
         max-width: 22vw;

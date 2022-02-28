@@ -68,10 +68,8 @@ let actorsdic = [
     {src: "black.jpg", real_name: "", char_name: ""}
 ];
 export default function Player() {
-    // useDocumentTitle("");
-    // document.getElementsById("des-div").style.height=window.innerWidth*7.5/12*9/16;
-    let name = ""
-    let landscape = "endgame2.jpg"
+    let name;
+    let landscape;
     const queryParams = new URLSearchParams(window.location.search)
     name = queryParams.get("name") === null ? "Harry Potter and The Prisioner of Azkaban" : queryParams.get("name");
     landscape = queryParams.get("lndimg") == null ? "endgame2.jpg" : queryParams.get("lndimg");
