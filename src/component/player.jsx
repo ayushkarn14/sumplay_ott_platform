@@ -36,7 +36,10 @@ let moviepostersdic = [
     {portraitImage: "inception.jpg", name: "Inception", landScapeImage: "inceptionland.jpg"},
     {portraitImage: "te.jpg", name: "Theory Of Everything", landScapeImage: "teland.jpg"},
     {portraitImage: "shangchi.jpg", name: "Shang Chi", landScapeImage: "shangchiland.jpg"},
-    {portraitImage: "madmax.jpg", name: "Madmax", landScapeImage: "madmaxland.jpg"},
+    {portraitImage: "madmax.jpg", name: "Madmax", landScapeImage: "madmaxland.png"},
+    {portraitImage: "eot.jpg", name: "Edge Of Tomorrow", landScapeImage: "eotland.jpg"},
+    {portraitImage: "interstellar.jpg", name: "Interstellar", landScapeImage: "interstellarland.jpg"},
+    {portraitImage: "Okja.png", name: "Okja", landScapeImage: "Okjaland.jpg"},
     // {src: "kingsmen.jpg", name: "Kingsmen"},
     // {src: "arrival.jpg", name: "Arrival"},
     // {src: "endgame.jpg", name: "Avengers: Endgame"},
@@ -56,11 +59,11 @@ let moviepostersdic = [
 ];
 
 let actorsdic = [
-    {src: "assets/playerpics/daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"},
-    {src: "assets/playerpics/hagrid.png", real_name: "Marek Obertyn", char_name: "as Hagrid"},
-    {src: "assets/playerpics/daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"},
-    {src: "assets/playerpics/daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"},
-    {src: "assets/playerpics/daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"}
+    {src: "daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"},
+    {src: "hagrid.png", real_name: "Marek Obertyn", char_name: "as Hagrid"},
+    {src: "daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"},
+    {src: "daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"},
+    {src: "daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"}
 ];
 export default function Player() {
     // useDocumentTitle("");
@@ -73,9 +76,9 @@ export default function Player() {
     useDocumentTitle(name);
 
     let movieposters = moviepostersdic.map((data) => (
-        <Link to={`/player?name=${data.name}&lndimg=${""}`} onClick={() => setTimeout(function () {
+        <Link to={`/player?name=${data.name}&lndimg=${data.landScapeImage}`} onClick={() => setTimeout(function () {
             window.location.reload()
-            }, 500)}>
+        }, 500)}>
             <Grid item>
                 <Card className="popup movie-poster-card">
                     <CardMedia
@@ -94,7 +97,7 @@ export default function Player() {
             <Grid item xs={3}>
                 <Item>
                     <img
-                        src={data.src}
+                        src={`assets/playerpics/${data.src}`}
                         className="castimg"
                     />
                 </Item>
@@ -125,10 +128,12 @@ export default function Player() {
                         <h1 style={{marginTop: "0"}}>{name}</h1>
                         <p className="desctitle">Description</p>
                         <p className="desc">
-                            Harry Potter, Ron and Hermione return to Hogwarts School of
-                            Witchcraft and Wizardry for their third year of study, where they
-                            delve into the mystery surrounding an escaped prisoner who poses a
-                            dangerous threat to the young wizard.
+                            Rickrolling or a Rickroll, is an Internet meme involving pranking an unexpected appearance
+                            of the music video for the 1987 song "Never Gonna Give You Up," performed by the English
+                            singer Rick Astley. The meme is a type of bait and switch, usually using a disguised
+                            hyperlink that leads to the music video. When victims click on a seemingly unrelated link,
+                            the site with the music video loads instead of what was expected, and they have been
+                            "Rickrolled".
                         </p>
                         <p className="casttitle">Cast</p>
                         <div className="castrow">

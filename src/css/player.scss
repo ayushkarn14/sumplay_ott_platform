@@ -100,6 +100,7 @@
 
 .movieposter {
     height: 36vh;
+    max-width: 12vw !important;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -137,7 +138,8 @@
         margin: 10px;
     }
     .movieposter {
-        height: 25vh;
+        height: 32vh;
+        max-width: 38vw !important;
     }
 }
 
