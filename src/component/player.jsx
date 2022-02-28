@@ -85,7 +85,7 @@ export default function Player() {
                         component="img"
                         image={`assets/moviePosters/${data.portraitImage}`}
                         alt={data.name}
-                        className="movieposter" alt="poster"
+                        className="movieposter"
                     />
                 </Card>
             </Grid>
