@@ -59,11 +59,13 @@ let moviepostersdic = [
 ];
 
 let actorsdic = [
-    {src: "daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"},
-    {src: "hagrid.png", real_name: "Marek Obertyn", char_name: "as Hagrid"},
-    {src: "daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"},
-    {src: "daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"},
-    {src: "daniel.png", real_name: "Daniel Radcliffe", char_name: "as Harry Potter"}
+    {src: "yash.png", real_name: "Yash Chauhan", char_name: "as Randomrofi"},
+    {src: "ayush.png", real_name: "Ayush Karn", char_name: "as Rok Vin"},
+    {src: "yash2.png", real_name: "Randomrofi", char_name: "as Yash Chauhan"},
+    {src: "rick.png", real_name: "Rick Astley", char_name: "as Rickky"},
+    {src: "girl.png", real_name: "Kristin Seifert", char_name: "as Larki"},
+    {src: "bartender.png", real_name: "Clive Clarke", char_name: "as Bartender"},
+    {src: "black.jpg", real_name: "", char_name: ""}
 ];
 export default function Player() {
     // useDocumentTitle("");

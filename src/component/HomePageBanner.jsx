@@ -30,12 +30,12 @@ export default function HomePageBanner() {
             <Grid item md={4.7} xs={4}>
                 
             </Grid>
-            <Grid item  md={1.2} xs={4} className="button-align" justify="center">
+            <Grid item  md={1.2} xs={4.2} className="button-align" justify="center">
                 <Link to={`/player?name=${"Stranger Things"}&lndimg=banner.png`} style={{textDecoration: "none"}}>
                     <Button variant="contained" className="bannerbuttons"><span style={{fontSize:"150%"}}>&#9654;</span>&nbsp;&nbsp;<p><span className="buttontext">Watch Now</span></p></Button>
                 </Link>
             </Grid>
-            <Grid item sx={{display:{md:"none"}}} xs={4}>
+            <Grid item sx={{display:{md:"none"}}} xs={3.8}>
                 
             </Grid>
             <Grid item sx={{display:{md:"none"}}} xs={4}>
@@ -44,10 +44,10 @@ export default function HomePageBanner() {
             <Grid item md={0.2}  sx={{display:{xs:"none", md:"flex"}}} >
                 
             </Grid>
-            <Grid item md={1.2} xs={4} className="button-align">
+            <Grid item md={1.2} xs={4.2} className="button-align">
                 <Button variant="contained" className="bannerbuttons"><span style={{fontSize:"250%"}}>&#43;</span>&nbsp;&nbsp;<p><span className="buttontext">Watch Later</span></p></Button>
             </Grid>
-            <Grid item md={4.7} xs={4}>
+            <Grid item md={4.7} xs={3.8}>
                 
             </Grid>
         </Grid>
