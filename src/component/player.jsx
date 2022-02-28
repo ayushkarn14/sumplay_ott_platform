@@ -30,7 +30,7 @@ const bull = (
 let moviepostersdic = [
     {portraitImage: "dune.jpg", name: "dune", landScapeImage: "duneland.jpg"},
     {portraitImage: "free-guy.jpg", name: "Freeguy", landScapeImage: "free-guyland.jpg"},
-    {portraitImage: "FF7.jpg", name: "Furious 7", landScapeImage: "ff7wland.jpg"},
+    {portraitImage: "FF7.jpg", name: "Furious 7", landScapeImage: "ff7land.jpg"},
     {portraitImage: "wm.jpg", name: "Watchmen", landScapeImage: "wmland.jpg"},
     {portraitImage: "godfather.jpg", name: "Godfather", landScapeImage: "godfatherland.jpg"},
     {portraitImage: "inception.jpg", name: "Inception", landScapeImage: "inceptionland.jpg"},
@@ -80,7 +80,7 @@ export default function Player() {
             window.location.reload()
         }, 500)}>
             <Grid item>
-                <Card className="popup movie-poster-card">
+                <Card className="popup movie-poster-card movieposter">
                     <CardMedia
                         component="img"
                         image={`assets/moviePosters/${data.portraitImage}`}
