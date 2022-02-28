@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sumplay_ott_platform/static/css/main.a7a7947a.css",
+    "main.js": "/sumplay_ott_platform/static/js/main.e25b8c97.js",
+    "index.html": "/sumplay_ott_platform/index.html",
+    "main.a7a7947a.css.map": "/sumplay_ott_platform/static/css/main.a7a7947a.css.map",
+    "main.e25b8c97.js.map": "/sumplay_ott_platform/static/js/main.e25b8c97.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7a7947a.css",
+    "static/js/main.e25b8c97.js"
+  ]
+}
