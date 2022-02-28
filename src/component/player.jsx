@@ -28,16 +28,31 @@ const bull = (
 );
 
 let moviepostersdic = [
-    {src: "dune.jpg", name: "dune"},
-    {src: "freeguy.jpg", name: "Freeguy"},
-    {src: "furious7.jpg", name: "Furious 7"},
-    {src: "watchmen.jpg", name: "Watchmen"},
-    {src: "godfather.jpg", name: "Godfather"},
-    {src: "inception.jpg", name: "Inception"},
-    {src: "theoryofeverything.jpg", name: "Theory Of Everything"},
-    {src: "shangchi.jpg", name: "Shang Chi"},
-    {src: "madmax.jpg", name: "Madmax"},
-    {src: "kingsmen.jpg", name: "Kingsmen"},
+    {portraitImage: "dune.jpg", name: "dune", landScapeImage: "duneland.jpg"},
+    {portraitImage: "free-guy.jpg", name: "Freeguy", landScapeImage: "free-guyland.jpg"},
+    {portraitImage: "FF7.jpg", name: "Furious 7", landScapeImage: "ff7wland.jpg"},
+    {portraitImage: "wm.jpg", name: "Watchmen", landScapeImage: "wmland.jpg"},
+    {portraitImage: "godfather.jpg", name: "Godfather", landScapeImage: "godfatherland.jpg"},
+    {portraitImage: "inception.jpg", name: "Inception", landScapeImage: "inceptionland.jpg"},
+    {portraitImage: "te.jpg", name: "Theory Of Everything", landScapeImage: "teland.jpg"},
+    {portraitImage: "shangchi.jpg", name: "Shang Chi", landScapeImage: "shangchiland.jpg"},
+    {portraitImage: "madmax.jpg", name: "Madmax", landScapeImage: "madmaxland.jpg"},
+    // {src: "kingsmen.jpg", name: "Kingsmen"},
+    // {src: "arrival.jpg", name: "Arrival"},
+    // {src: "endgame.jpg", name: "Avengers: Endgame"},
+    // {src: "eot.jpg", name: "Edge of Tomorrow"},
+    // {src: "ironman.png", name: "Ironman"},
+    // {src: "godfather.jpg", name: "Godfather"},
+    // {src: "harrypotter.jpg", name: "Harry Potter and The Prisoner of Azkaban"},
+    // {src: "inception.jpg", name: "Inception"},
+    // {src: "interstellar.jpg", name: "Interstellar"},
+    // {src: "joker.jpg", name: "Joker"},
+    // {src: "kgf.jpg", name: "KGF"},
+    // {src: "matrix.jpg", name: "Matrix"},
+    // {src: "moneyheist.jpg", name: "Money Heist"},
+    // {src: "Okja.png", name: "Okja"},
+    // {src: "pk.jpg", name: "PK"},
+    // {src: "punisher.jpg", name: "Punisher"}
 ];
 
 let actorsdic = [
@@ -65,7 +80,7 @@ export default function Player() {
                 <Card className="popup movie-poster-card">
                     <CardMedia
                         component="img"
-                        image={`assets/playerpics/${data.src}`}
+                        image={`assets/moviePosters/${data.portraitImage}`}
                         alt={data.name}
                         className="movieposter" alt="poster"
                     />
