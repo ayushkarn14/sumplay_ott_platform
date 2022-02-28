@@ -14,10 +14,10 @@ export default function Home() {
         }}>
                 <Header/>
                 <HomePageBanner/>
-                <HomePageCarousel/>
-                <HomePageCarousel/>
-                <HomePageCarousel/>
-                <HomePageCarousel/>
+                <HomePageCarousel index={0}/>
+                <HomePageCarousel index={0}/>
+                <HomePageCarousel index={0}/>
+                <HomePageCarousel index={0}/>
                 <div style={{marginBottom:"6vh"}}/>
                 <SumplayFooter/>
         </div>

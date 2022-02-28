@@ -64,6 +64,8 @@ export default function HomePageCarousel(props) {
     const [image3, setImage3] = useState(3);
     const [image4, setImage4] = useState(4);
 
+    const carouselno = props.index;
+
     const nextSlide = () => {
         setCurrent(current === 4 ? 0 : current + 1);
         setImage1(image1 === 4 ? 0 : image1 + 1)
@@ -117,7 +119,7 @@ export default function HomePageCarousel(props) {
                                 <Card style={{borderRadius: "2vh"}}
                                       className="popup">
 
-                                {moviepostersdict[0].map((slide, index) => {
+                                {moviepostersdict[carouselno].map((slide, index) => {
                                     return (
                                         <div
                                             className={index === current ? 'slide active' : 'slide'}
@@ -145,7 +147,7 @@ export default function HomePageCarousel(props) {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict[0].map((slide, index) => {
+                                    {moviepostersdict[carouselno].map((slide, index) => {
                                         return (
                                             <div
                                                 className={index === image1 ? 'slide active' : 'slide'}
@@ -173,7 +175,7 @@ export default function HomePageCarousel(props) {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict[0].map((slide, index) => {
+                                    {moviepostersdict[carouselno].map((slide, index) => {
                                         return (
                                             <div
                                                 className={index === image2 ? 'slide active' : 'slide'}
@@ -201,7 +203,7 @@ export default function HomePageCarousel(props) {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict[0].map((slide, index) => {
+                                    {moviepostersdict[carouselno].map((slide, index) => {
                                         return (
                                             <div className={index === image3 ? 'slide active' : 'slide'}
                                                  key={index}
@@ -228,7 +230,7 @@ export default function HomePageCarousel(props) {
                                     backgroundColor: "transparent"
                                 }}
                                       className="popup">
-                                    {moviepostersdict[0].map((slide, index) => {
+                                    {moviepostersdict[carouselno].map((slide, index) => {
                                         return (
                                             <div className={index === image4 ? 'slide active' : 'slide'}
                                                  key={index}
